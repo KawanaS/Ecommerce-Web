@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<h1>Register</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type ="submit" value="Register">
+</form>
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</html>
+{% endblock content %}
